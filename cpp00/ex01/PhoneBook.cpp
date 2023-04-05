@@ -33,15 +33,31 @@ void PhoneBook::add_contact()
 
 	std::cout << "set first name: ";
 	getline(std::cin, tmp);
+	while (tmp == ""){
+		std::cout << "field cant be empty\n"<< "set first name: ";
+		getline(std::cin, tmp);
+	}
 	contacts[i].set_f_name(tmp);
 	std::cout << "set last name: ";
 	getline(std::cin, tmp);
+	while (tmp == ""){
+		std::cout << "field cant be empty\n"<< "set last name: ";
+		getline(std::cin, tmp);
+	}
 	contacts[i].set_l_name(tmp);
 	std::cout << "set nickname: ";
 	getline(std::cin, tmp);
+	while (tmp == ""){
+		std::cout << "field cant be empty\n"<< "set nickname: ";
+		getline(std::cin, tmp);
+	}
 	contacts[i].set_n_name(tmp);
 	std::cout << "set phone number: ";
 	getline(std::cin, tmp);
+	while (tmp == ""){
+		std::cout << "field cant be empty\n"<< "set phone number: ";
+		getline(std::cin, tmp);
+	}
 	while (is_valid(tmp)){
 		std::cout << "phone number: ";
 		getline(std::cin, tmp);
@@ -49,16 +65,21 @@ void PhoneBook::add_contact()
 	contacts[i].set_n_phone(tmp);
 	std::cout << "and darkest secret: ";
 	getline(std::cin, tmp);
+	while (tmp == ""){
+		std::cout << "field cant be empty\n"<< "and darkest secret: ";
+		getline(std::cin, tmp);
+	}
 	contacts[i].set_d_secret(tmp);
 	std::cout <<"|****DONE****|\n\n";
 	i++;
 	if (x == 0)
 		this->index++;
-	else if (i == 8)
+	if (i == 8)
 	{
 		i = 0;
 		x = 1;
 	}
+	std::cout << i;
 }
 
 void	PhoneBook::print_one(int one)
