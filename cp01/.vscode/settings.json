@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "new": "cpp",
+        "iostream": "cpp",
+        "__string": "cpp",
+        "algorithm": "cpp",
+        "concepts": "cpp",
+        "filesystem": "cpp",
+        "string": "cpp"
+    }
+}
